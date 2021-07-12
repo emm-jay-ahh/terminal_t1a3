@@ -1,34 +1,60 @@
-# 𝕖𝕞𝕞_𝕛𝕒𝕪 🅽🅴🆃-🆃🅾🅾🅻🆂
+# 🅽🅴🆃-🆃🅾🅾🅻🆂
 
-Terminal Application Assignment
+Terminal Application Assingment
+CCC Bootcamp 2021 - Coder Academy
 
+<br />
 
 
 ## Statement of Purpose and Scope
 
-Net-Tools is a collection of IT Networking Tools and Scripts that I use almost every day.
-Collated together under one application for ease of access and quick execution.
-It will also be an ever-growing tool kit for testing and diagnosing networks.
+<br />
 
-Some days the old brain does not respond to coffee and for the life of me, I am unable to remember a command name or the correct arguments to use.
-The internet is always at your fingertips and a quick search always nets you what you need in one to three clicks.
-But even this over time becomes tedious, So I thought to myself why not just build a Python Application that houses all the network tools I need and use.
+###### Describe at a high level what the application will do
+Net-Tools is a collection of IT Networking Tools and Scripts that I use almost daily both work and home. 
+Combining these tools into one application for quick execution and ease of use.
+It will also be an ever-growing tool-kit for testing and diagnosing networks including hacking.
 
-This tool is available for anyone to use. 
-IT Admins, Network & Security folk I think will appreciate it most
+<br />
+
+###### Identify the problem it will solve and explain why you are developing it
+It happens to us all from time to time where you forget an argument to a  command or the command itself.
+Either a man page or google is usually the rescue plan, but even that at times feels tedious.
+So I thought it was best I build a Python App that houses all the network tools I need and use most frequently.
+
+<br />
+
+###### Identify the target audience
+This tool is available for anyone to use, IT Admins, Network & Security folk I think will appreciate it most.
+But this is also to assist newcomers to IT and Networking or even the avid home user troubleshooting their network.
+This tool is for Unix/Linux users.
+Mac untested. Windows WSL2 untested. But potentially could work
+
+<br />
+
+###### Explain how a member of the target audience will use it
+The tool required execution from a terminal CLI which will display a simple and easy-to-navigate menu system.
+The user can navigate with the up/down arrows and Enter key or by using a quick key that is assigned.
+Some tools will also have submenus allowing for different operations or tasks that they can perform.
 
 
-*- explain how a member of the target audience will use it*
 
+<br />
+<br />
 
 
 ## Features
 
-- Check current network settings
+<br />
 
-- Ping a local or external host
+###### At least THREE features, describe each feature
+* Menu System
 
-- Scan local network for Hosts
+* Network Settings
+
+* Ping Host
+
+* Scan Local Network
 
 
 ## User Interaction and Experience
