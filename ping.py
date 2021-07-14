@@ -1,4 +1,3 @@
-# importing libraries
 import subprocess
 import os
 
@@ -6,18 +5,17 @@ import os
 def ping_host(): 
     try:    # a function to ping given host
         def ping(host, count):
-            
+            # command we want to invoke
             command = "ping"
             # Send any number of pings to a host address (FQDN or IP Address)
             # example of the command: ping -c 2 www.google.com     
-            full_command = subprocess.Popen(["sudo", command, "-c", count, host], stdout = subprocess.PIPE)
+            full_command = subprocess.Popen([command, "-c", count, host], stdout = subprocess.PIPE)
             
             # store the standard output (stdout) of the ping
             # remove or split uneccessary data.
             output = str(full_command.communicate())
             output = output.split("\n")
             output = output[0].split("\\n")
-            print(output)
         
             # variable to store the result (list)
             results = []
@@ -27,9 +25,10 @@ def ping_host():
             # print the results
             print("\nPING RESULTS: \n")
             print("\n".join(results[len(results) - 3:len(results) - 1]))
-
+            input("\n\nPress Enter to return to MAIN MENU\n\n")
+            
             return results
-        
+
         #Take user input
         def user_input():
             ip_address = input("\n Enter a Web Address or IP Address"
