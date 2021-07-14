@@ -1,5 +1,6 @@
 from simple_term_menu import TerminalMenu
 from ping import ping_host
+from settings import show_all, show_interface
 
 
 def menu():
@@ -24,12 +25,12 @@ def menu():
     
     # Network Settings menu
     # options to display including [hotkeys]
-    net_settings_options = [
-        "[1] Show All (ifconfig)",
-        "[2] Show Interface (ifconfig [interface])",
-        "[q] Quit/Exit",
+    net_options = [
+        "[1] Show All",
+        "[2] Show [Interface]",
+        "[b] Back To Main Menu",
     ]
-    net_settings_menu = TerminalMenu(net_settings_options, 
+    net_menu = TerminalMenu(net_options, 
         clear_screen=True,
         title = "\n\n     🆂 🅴 🆃 🆃 🅸 🅽 🅶 🆂\n\n",
         status_bar="\n     Check network related settings\n",
@@ -39,23 +40,45 @@ def menu():
         cycle_cursor=True,
         )
 
-    quitting = False
+    
+    def menu_operation():
+        try:
+            quitting = False
+            while quitting == False:
+                options_index = main_menu.show()
+                options_choice = main_options[options_index]
 
-    try:
-        while quitting == False:
-            options_index = main_menu.show()
-            options_choice = main_options[options_index]
+                if(options_choice == main_options[-1]):
+                    print("\n\nQUIT NET TOOLS\n\n")
+                    quitting = True                             # Quit/Exit Net-Tools
+                
+                elif(options_choice == main_options[0]):              
+                    options_index = net_menu.show()             # Open submenu to Network Settings
+                    options_choice = net_options[options_index]
+                    
+                    try:
+                        if(options_choice == net_options[0]):
+                            show_all()
+                        elif(options_choice == net_options[1]):
+                            show_interface()
+                        elif(options_choice == net_options[-1]):
+                            main_menu.show()
 
-            if(options_choice == main_options[-1]):
-                print("\nQUIT NET TOOLS\n")
-                quitting = True                         # Quit/Exit Net-Tools
-            if(options_choice == main_options[0]):
-                net_settings_menu.show()                # Open submenu to Network Settings
-            if(options_choice == main_options[1]):    
-                ping_host()                             # change to Ping Host when app is built
-            if(options_choice == main_options[2]):
-                return                                  # change to Scan Network when app is built
-    except TypeError:
-        print("\nERROR:  POSSIBLE KEYBOARD INTERUPT\n")
+                    except AttributeError:
+                        continue
+                    except KeyboardInterrupt:
+                        print("KEYBOARD INTERUPT")
+                        
 
+                elif(options_choice == main_options[1]):    
+                    ping_host()                                 # change to Ping Host when app is built
+                
+                elif(options_choice == main_options[2]):
+                    return                                      # change to Scan Network when app is built
+    
+        except TypeError:
+            print("\nERROR:  POSSIBLE KEYBOARD INTERUPT\n")
+    
+    menu_operation()
+        
 menu()
