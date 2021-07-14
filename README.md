@@ -79,7 +79,6 @@ The project can be found here https://pypi.org/project/simple-term-menu/ for tho
 ## User Interaction and Experience
 
 
-
 ## Control Flow Diagram
 
 ## Implementation Plan

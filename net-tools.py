@@ -1,4 +1,6 @@
 from simple_term_menu import TerminalMenu
+from ping import ping_host
+
 
 def menu():
     # Main menu
@@ -10,11 +12,10 @@ def menu():
         "[3] Scan Network",
         "[q] Quit/Exit",
     ]
-    
     main_menu = TerminalMenu(main_options,
         clear_screen=True,
         title="\n\n     🅽 🅴 🆃 - 🆃 🅾 🅾 🅻 🆂\n\n",
-        status_bar="\n     Main Menu\n",
+        status_bar="\n     Tools\n",
         menu_cursor_style=("fg_green", "bold",),
         menu_highlight_style=("bg_black", "fg_green"),
         status_bar_style=("bg_black", "fg_green",),
@@ -28,7 +29,15 @@ def menu():
         "[2] Show Interface (ifconfig [interface])",
         "[q] Quit/Exit",
     ]
-    net_settings_menu = TerminalMenu(net_settings_options, title = "\n\n     🅽 🅴 🆃 🆆 🅾 🆁 🅺  🆂 🅴 🆃 🆃 🅸 🅽 🅶 🆂\n\n")
+    net_settings_menu = TerminalMenu(net_settings_options, 
+        clear_screen=True,
+        title = "\n\n     🆂 🅴 🆃 🆃 🅸 🅽 🅶 🆂\n\n",
+        status_bar="\n     Check network related settings\n",
+        menu_cursor_style=("fg_green", "bold",),
+        menu_highlight_style=("bg_black", "fg_green"),
+        status_bar_style=("bg_black", "fg_green",),
+        cycle_cursor=True,
+        )
 
     quitting = False
 
@@ -39,11 +48,11 @@ def menu():
 
             if(options_choice == main_options[-1]):
                 print("\nQUIT NET TOOLS\n")
-                quitting = True
+                quitting = True                         # Quit/Exit Net-Tools
             if(options_choice == main_options[0]):
                 net_settings_menu.show()                # Open submenu to Network Settings
             if(options_choice == main_options[1]):    
-                return                                  # change to Ping Host when app is built
+                ping_host()                             # change to Ping Host when app is built
             if(options_choice == main_options[2]):
                 return                                  # change to Scan Network when app is built
     except TypeError:
