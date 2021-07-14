@@ -50,25 +50,20 @@ Some tools will also have submenus allowing for different operations or tasks th
 ###### At least THREE features, describe each feature
 
 1. Net-Tools Menu System
-    - A simple interactive and intuitive layout design
+    - A simple interactive and intuitive design
     - Easy navigation up/down + enter or assigned shortcut keys
-    - Future proof to handle a growing 
+    - And Future proof to handle a growing toolset
 
 
 The idea here is to keep the interface clean and uncluttered, we are going for function over fashion.
 I decided to go with "simple_term_menu" library for a terminal menu system as it seems to tick all the boxes.
-The navigation is baked in but allowing hot keys assignment really speeds things up.
+The navigation is baked in but allowing hotkeys assignment will speed things up.
 The documentation is solid and getting a quick demo up and running was relatively quick, 
 as I had to get a feel for how it operates before committing to it.
 
-I used --- ADD MORE
+I used --- ADD MORE   
 
-The project can be found here https://pypi.org/project/simple-term-menu/ for those interested
-
-
-
-
-
+The project can be found here https://pypi.org/project/simple-term-menu/ for those who are interested
 
 
 2. Check Current Network Settings
@@ -82,6 +77,8 @@ The project can be found here https://pypi.org/project/simple-term-menu/ for tho
 
 
 ## User Interaction and Experience
+
+
 
 ## Control Flow Diagram
 
