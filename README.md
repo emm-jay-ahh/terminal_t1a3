@@ -60,7 +60,7 @@ The documentation is solid and getting a quick demo up and running was relativel
 <br />
 
 2. Network Settings
-    - Utilising subprocess library to invoke Linux Commands (Python Standard Library)
+    - Utilising subprocess library to invoke Linux Commands (Python Standard Library).
     - 2 options to choose from (a sub-menu is displayed)
         - Show All - Check Settings on all network interfaces
             - This Will display all current network interfaces including virtual devices, if available.
@@ -73,10 +73,10 @@ Other tools current and future this application will house will require the user
 <br />
 
 3. Ping Host
-    - Utilising subprocess library to invoke Linux Commands (Python Standard Library)
+    - Utilising subprocess library to invoke Linux Commands (Python Standard Library).
     - Can ping internal hosts (e.g 192.168.1.50).
     - Can also ping externally (e.g www.google.com).
-    - User is required to enter an IP or FQDN and then the number of pings to send.
+    - User is required to enter an IP or FQDN and then the number of ping packets to send.
 
 The idea here is to check that we have network access either internal or external or both.
 Ping is a great tool for helping to troubleshoot network-related issues.
@@ -87,8 +87,32 @@ The addition of a ping tool was to avoid having to open a new terminal or close 
 4. Scan Network
     *
 
+<br />
+<br />
 
 ## User Interaction and Experience
+
+User will launch net-tools and the following menu will be displayed
+
+(PICTURE HERE)
+
+Currently three options(tools) the user can choose to run.
+The user will utilise keyboard with up/down + enter 
+Or enter or the associated shortcut key to to launch desired tool
+
+(PICTURE HERE)
+
+Option One - Network Settings
+
+(PICTURE HERE)
+
+Option Two - Ping Host
+
+(PICTURE HERE)
+
+Option Three - Scan Network
+
+(PICTURE HERE)
 
 
 ## Control Flow Diagram
@@ -96,6 +120,9 @@ The addition of a ping tool was to avoid having to open a new terminal or close 
 ## Implementation Plan
 
 ## Status Updates
+
+- Status Update One complete - see LOGS.md
+- Status Update Two (expected entry 17.07.21) - see LOGS.md
 
 ## Implement Application
 
