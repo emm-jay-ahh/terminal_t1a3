@@ -85,7 +85,18 @@ The addition of a ping tool was to avoid having to open a new terminal or close 
 <br />
 
 4. Scan Network
-    *
+    - Utilising scapy library - A powerful and interactive packet manipulation program.
+    - This is for local network use only (Connecting to a network externally over vpn will also work)
+    - User can scan for a specific IP, however tool is for discovering all IPs on network
+
+The idea is to scan you whole network for connected devices and have them return the IP address of active hosts.
+Scan network is utilising the ARP protocol which is a layer 2 protocol of the OSI Model, also known as the Data Link layer. ARP is short for Address Resolution Protocol
+Scan Network is forwarding a broadcast packet to your Switch. 
+The switch will then flood out of all connected ports the ARP request packet it received.
+Any operatining devices connected will see this ARP packet request.
+The devices will then reply with a unicast packet stating, this is my MAC and this is my IP Address associated to that MAC.
+This information is then updated within the ARP Table on your system.
+
 
 <br />
 <br />
