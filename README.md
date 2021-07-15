@@ -30,7 +30,6 @@ But this is also to assist newcomers to IT and Networking or even the avid home 
 This tool is for Unix/Linux users.
 Mac & Windows WSL2 should work but currently untested.
 
-
 <br />
 
 ###### Explain how a member of the target audience will use it
@@ -38,10 +37,8 @@ The tool requires execution from a terminal CLI and will display a simple and ea
 The user can navigate with the up/down arrows and Enter key or by using a quick key that is assigned.
 Some tools will also have submenus allowing for different operations or tasks that they can perform.
 
-
 <br />
 <br />
-
 
 ## Features
 
@@ -50,29 +47,44 @@ Some tools will also have submenus allowing for different operations or tasks th
 ###### At least THREE features, describe each feature
 
 1. Net-Tools Menu System
+    - Utilising simple_term_menu (Library)  - https://pypi.org/project/simple-term-menu/
     - A simple interactive and intuitive design
-    - Easy navigation up/down + enter or assigned shortcut keys
+    - Easy navigation up/down + enter or assigned shortcut keys (also VIM shortcuts work)
     - And Future proof to handle a growing toolset
-
 
 The idea here is to keep the interface clean and uncluttered, we are going for function over fashion.
 I decided to go with "simple_term_menu" library for a terminal menu system as it seems to tick all the boxes.
 The navigation is baked in but allowing hotkeys assignment will speed things up.
-The documentation is solid and getting a quick demo up and running was relatively quick, 
-as I had to get a feel for how it operates before committing to it.
+The documentation is solid and getting a quick demo up and running was relatively quick, I had to get a feel for how it operates before committing to it.
+   
+<br />
 
-I used --- ADD MORE   
+2. Network Settings
+    - Utilising subprocess library to invoke Linux Commands (Python Standard Library)
+    - 2 options to choose from (a sub-menu is displayed)
+        - Show All - Check Settings on all network interfaces
+            - This Will display all current network interfaces including virtual devices, if available.
+        - Show Interface - Check Settings on a specific interface
+            - It requires the user to enter an interface name, it then will return the results for that interface only.
 
-The project can be found here https://pypi.org/project/simple-term-menu/ for those who are interested
+The idea is to be able to check network settings without opening another terminal or leaving this application to do so.
+Other tools current and future this application will house will require the user to know this type of information before tolls can be deployed correctly.l
 
+<br />
 
-2. Check Current Network Settings
-    *
+3. Ping Host
+    - Utilising subprocess library to invoke Linux Commands (Python Standard Library)
+    - Can ping internal hosts (e.g 192.168.1.50).
+    - Can also ping externally (e.g www.google.com).
+    - User is required to enter an IP or FQDN and then the number of pings to send.
 
-3. Ping a Host
-    *
+The idea here is to check that we have network access either internal or external or both.
+Ping is a great tool for helping to troubleshoot network-related issues.
+The addition of a ping tool was to avoid having to open a new terminal or close the application to check for network connectivity.
 
-4. Scan Local Network
+<br />
+
+4. Scan Network
     *
 
 
