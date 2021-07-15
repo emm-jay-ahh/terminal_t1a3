@@ -1,5 +1,4 @@
 import subprocess
-import os
 
 # ping a host address function
 def ping_host(): 
