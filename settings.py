@@ -1,5 +1,5 @@
 import subprocess
-import os
+
 
 # Check network settings
    
@@ -20,7 +20,7 @@ def show_interface():
     # command we want to invoke
     interface = input(  "\nEnter an interface name"
                         "\ne.g eth0, wlan0, eno2"
-                        "\n>>> ")
+                        "\n\n>>> ")
     
     command = ("ifconfig " + interface) 
     # Send any number of pings to a host address (FQDN or IP Address)
