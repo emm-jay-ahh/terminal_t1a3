@@ -84,10 +84,10 @@ I decided on building the scanner app using the scapy library instead of trying 
 
 Working On:
 
-    - Hopefully, finish the documentation by COB today
+- Hopefully, finish the documentation by COB today
 
-    - Then moving into Bug Testing
+- Then moving into Bug Testing
 
-    - Then onto bash script 
+- Then onto bash script 
 
-    - Go through assignment documentation to ensure I have covered everything I need
+- Go through assignment documentation to ensure I have covered everything I need
