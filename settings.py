@@ -12,7 +12,6 @@ def show_all():
 
     print(full_command)
 
-    print("\n\nScroll up to see results")
     input("\nPress ENTER to return to Main Menu\n\n")
 
 
