@@ -220,21 +220,24 @@ The user can utilise the keyboard with up/down + enter, or the user can use the 
 <br />
 
 
-### TOOL 01 - Network Settings Menu     shortcut key [1]
+### TOOL 01 - Network Settings Menu     
+- shortcut key [1]
 
 ![Network Settings Menu](https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-net_settings_menu.jpg)
 
 This is a submenu to the Main Menu and provides two options to the user.
 
 
-#### Show All - Shows all Network Settings      shortcut key [1]
+#### Show All 
+- Shows all Network Settings      shortcut key [1]
 
 ![Show All](https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-net_settings_menu-show_all.jpg)
 
 Just click Show All, and it will display all interfaces on your PC.
 
 
-#### Show Interface - Shows Specfic Network Inteface      shortcut key [2]
+#### Show Interface 
+- Shows Specfic Network Inteface      shortcut key [2]
 
 ![Show Interface](https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-net_settings_menu-show_interface.jpg)
 
@@ -244,7 +247,8 @@ To go back to the Main Menu you can select and enter Back to Main Menu or use th
 
 <br />
 
-### TOOL 02 - Ping Host     shortcut key [2]
+### TOOL 02 - Ping Host     
+- shortcut key [2]
 
 ![Ping Host](https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-ping_host.jpg)
 
@@ -254,7 +258,8 @@ This is a great tool for troubleshooting network connectivity internally and ext
 
 <br />
 
-### TOOL 03 - Scan Network      shortcut key [3]
+### TOOL 03 - Scan Network      
+- shortcut key [3]
 
 ![Scan Network](https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-scan_network.jpg)
 
