@@ -114,8 +114,6 @@ Run Bash Script
 
 ## Statement of Purpose and Scope
 
-<br />
-
 ###### Describe at a high level what the application will do
 Net-Tools is a collection of IT Networking Tools that I use almost daily both work and home. 
 Combining these tools into one application for quick execution and ease of use was a must for me.
@@ -148,8 +146,6 @@ Some tools will also have submenus allowing for different operations or tasks th
 <br />
 
 ## Features
-
-<br />
 
 ###### At least THREE features, describe each feature
 
@@ -210,26 +206,62 @@ This information is then updated within the ARP Table on your system.
 
 ## User Interaction and Experience
 
-User will launch net-tools and the following menu will be displayed
+User will launch net-tools, and the following menu will be displayed
+
+
+### Main Menu
 
 ![Main Menu](https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-main_menu.jpg)
 
-Currently three options(tools) the user can choose to run.
-The user will utilise keyboard with up/down + enter 
-Or use the associated shortcut key to to launch desired tool
+Currently three options or tools the user can choose to run.
+
+The user can utilise the keyboard with up/down + enter, or the user can use the shortcut keys to launch a tool.
+
+<br />
 
 
-Option One - Network Settings
+### TOOL 01 - Network Settings Menu     shortcut key [1]
 
 ![Network Settings Menu](https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-net_settings_menu.jpg)
 
-Option Two - Ping Host
+This is a submenu to the Main Menu and provides two options to the user.
 
-(PICTURE HERE)
 
-Option Three - Scan Network
+#### Show All - Shows all Network Settings      shortcut key [1]
 
-(PICTURE HERE)
+![Show All](https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-net_settings_menu-show_all.jpg)
+
+Just click Show All, and it will display all interfaces on your PC.
+
+
+#### Show Interface - Shows Specfic Network Inteface      shortcut key [2]
+
+![Show Interface](https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-net_settings_menu-show_interface.jpg)
+
+You will need to enter the interface name (network adapter), then press Enter to get your result. 
+
+To go back to the Main Menu you can select and enter Back to Main Menu or use the shortcut key [b]
+
+<br />
+
+### TOOL 02 - Ping Host     shortcut key [2]
+
+![Ping Host](https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-ping_host.jpg)
+
+Here we can either enter a web address (e.g. www.google.com) or an IP address (e.g. 192.168.1.200).
+It will then ask for how many ping packets to send (3 - 4 is usually enough)
+This is a great tool for troubleshooting network connectivity internally and externally.
+
+<br />
+
+### TOOL 03 - Scan Network      shortcut key [3]
+
+![Scan Network](https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-scan_network.jpg)
+
+
+<br />
+
+To exit net-tools you can select and enter Quit/Exit or use the shortcut key [q]
 
 
 ## Control Flow Diagram
