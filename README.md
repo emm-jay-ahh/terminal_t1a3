@@ -109,7 +109,7 @@ Run Bash Script
 
 
 
-
+<br />
 <br />
 
 ## Statement of Purpose and Scope
@@ -159,10 +159,10 @@ Some tools will also have submenus allowing for different operations or tasks th
     - Easy navigation up/down + enter or assigned shortcut keys (also VIM shortcuts work)
     - And Future proof to handle a growing toolset
 
-The idea here is to keep the interface clean and uncluttered, we are going for function over fashion.
+The idea here is to keep the interface clean and uncluttered; we are going for function over fashion.
 I decided to go with "simple_term_menu" library for a terminal menu system as it seems to tick all the boxes.
 The navigation is baked in but allowing hotkeys assignment will speed things up.
-The documentation is solid and getting a quick demo up and running was relatively quick, I had to get a feel for how it operates before committing to it.
+The documentation is solid, and getting a quick demo up and running was relatively quick. I had to get a feel for how it operates before committing to it.
    
 <br />
 
@@ -170,38 +170,38 @@ The documentation is solid and getting a quick demo up and running was relativel
     - Utilising subprocess library to invoke Linux Commands (Python Standard Library).
     - 2 options to choose from (a sub-menu is displayed)
         - Show All - Check Settings on all network interfaces
-            - This Will display all current network interfaces including virtual devices, if available.
+            - This Will display all current network interfaces, including virtual devices, if available.
         - Show Interface - Check Settings on a specific interface
-            - It requires the user to enter an interface name, it then will return the results for that interface only.
+            - It requires the user to enter an interface name; it then will return the results for that interface only.
 
 The idea is to be able to check network settings without opening another terminal or leaving this application to do so.
-Other tools current and future this application will house will require the user to know this type of information before tolls can be deployed correctly.l
+Other tools current and future this application will house will require the user to know this type of information before tolls can be deployed correctly.
 
 <br />
 
 3. Ping Host
     - Utilising subprocess library to invoke Linux Commands (Python Standard Library).
-    - Can ping internal hosts (e.g 192.168.1.50).
-    - Can also ping externally (e.g www.google.com).
+    - Can ping internal hosts (e.g. 192.168.1.50).
+    - Can also ping externally (e.g. www.google.com).
     - User is required to enter an IP or FQDN and then the number of ping packets to send.
 
-The idea here is to check that we have network access either internal or external or both.
+The idea here is to check that we have network access, either internal or external or both.
 Ping is a great tool for helping to troubleshoot network-related issues.
 The addition of a ping tool was to avoid having to open a new terminal or close the application to check for network connectivity.
 
 <br />
 
 4. Scan Network
-    - Utilising scapy library - A powerful and interactive packet manipulation program. (https://scapy.net/)
-    - This is for local network use only (Connecting to a network externally over vpn will also work)
-    - User can scan for a specific IP, however tool is for discovering all IPs on network
+    - Utilising scapy library - A powerful and interactive packet manipulation program. 
+    - This is for local network use only (Connecting to a network externally over VPN will also work)
+    - User can scan for a specific IP. However, the tool is for discovering all IPs on a network
 
-The idea is to scan you whole network for connected devices and have them return the IP address of active hosts.
-Scan network is utilising the ARP protocol which is a layer 2 protocol of the OSI Model, also known as the Data Link layer. ARP is short for Address Resolution Protocol
-Scan Network is forwarding a broadcast packet to your Switch. 
-The switch will then flood out of all connected ports the ARP request packet it received.
-Any operatining devices connected will see this ARP packet request.
-The devices will then reply with a unicast packet stating, this is my MAC and this is my IP Address associated to that MAC.
+The idea is to scan your whole network for connected devices and have them return the IP address of active hosts.
+Scan network is utilising the ARP protocol, which is a layer 2 protocol of the OSI Model, also known as the Data Link layer. ARP is short for Address Resolution Protocol
+Scan Network is forwarding a broadcast packet to your switch. 
+The switch will then flood out of all connected ports the ARP request packet it just received.
+Any operating devices connected will see this ARP packet request.
+The devices will then reply with a unicast packet stating, this is my MAC, and this is my IP Address associated with that MAC.
 This information is then updated within the ARP Table on your system.
 
 
