@@ -212,18 +212,16 @@ This information is then updated within the ARP Table on your system.
 
 User will launch net-tools and the following menu will be displayed
 
-![Image of Main Menu]
-https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-main_menu.jpg
+![Main Menu](https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-main_menu.jpg)
 
 Currently three options(tools) the user can choose to run.
 The user will utilise keyboard with up/down + enter 
-Or enter or the associated shortcut key to to launch desired tool
+Or use the associated shortcut key to to launch desired tool
 
-(PICTURE HERE)
 
 Option One - Network Settings
 
-(PICTURE HERE)
+![Network Settings Menu](https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-net_settings_menu.jpg)
 
 Option Two - Ping Host
 
