@@ -4,6 +4,8 @@ from settings import show_all, show_interface
 from scanner import scan_network
 
 def menu(): 
+    # Menu display and style
+    # Main Menu
     main_options = [
         "[1] Network Settings",
         "[2] Ping Host",
@@ -22,7 +24,6 @@ def menu():
         )
     
     # Network Settings menu
-    # options to display including [hotkeys]
     net_options = [
         "[1] Show All",
         "[2] Show [Interface]",
