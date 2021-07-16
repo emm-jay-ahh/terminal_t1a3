@@ -1,7 +1,18 @@
+import argparse
 from simple_term_menu import TerminalMenu
 from ping import ping_host
 from settings import show_all, show_interface
 from scanner import scan_network
+
+
+def parse_arguments():
+    parser = argparse.ArgumentParser(
+        usage="sudo net-tools",
+        description="sudo privileges are required for the tools inside to function correctly"
+    
+    )
+    parser.parse_args()
+
 
 def menu(): 
     # Menu display and style
@@ -81,5 +92,5 @@ def menu():
     
     menu_operation()
 
-
+parse_arguments()
 menu()
