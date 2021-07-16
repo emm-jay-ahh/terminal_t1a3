@@ -212,7 +212,8 @@ This information is then updated within the ARP Table on your system.
 
 User will launch net-tools and the following menu will be displayed
 
-(PICTURE HERE)
+![Image of Main Menu]
+https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-main_menu.jpg
 
 Currently three options(tools) the user can choose to run.
 The user will utilise keyboard with up/down + enter 
@@ -241,6 +242,8 @@ Option Three - Scan Network
 
 - Status Update One complete - see development-log.md
 - Status Update Two complete - see development-log.md
+
+https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/development-log.md
 
 
 
