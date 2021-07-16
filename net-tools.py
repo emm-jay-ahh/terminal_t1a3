@@ -1,19 +1,17 @@
 from simple_term_menu import TerminalMenu
 from ping import ping_host
 from settings import show_all, show_interface
+from scanner import scan_network
 
-
-def menu():
-    # Main menu
-    # options to display including [hotkeys]
-    
+def menu(): 
     main_options = [
         "[1] Network Settings",
         "[2] Ping Host",
         "[3] Scan Network",
         "[q] Quit/Exit",
     ]
-    main_menu = TerminalMenu(main_options,
+    main_menu = TerminalMenu(
+        main_options,
         clear_screen=True,
         title="\n\n     🅽 🅴 🆃 - 🆃 🅾 🅾 🅻 🆂\n\n",
         status_bar="\n     Tools\n",
@@ -30,7 +28,8 @@ def menu():
         "[2] Show [Interface]",
         "[b] Back To Main Menu",
     ]
-    net_menu = TerminalMenu(net_options, 
+    net_menu = TerminalMenu(
+        net_options, 
         clear_screen=True,
         title = "\n\n     🆂 🅴 🆃 🆃 🅸 🅽 🅶 🆂\n\n",
         status_bar="\n     Check network related settings\n",
@@ -74,11 +73,12 @@ def menu():
                     ping_host()                                 # change to Ping Host when app is built
                 
                 elif(options_choice == main_options[2]):
-                    return                                      # change to Scan Network when app is built
+                    scan_network()                              # change to Scan Network when app is built
     
         except TypeError:
             print("\nERROR:  POSSIBLE KEYBOARD INTERUPT\n")
     
     menu_operation()
-        
+
+
 menu()
