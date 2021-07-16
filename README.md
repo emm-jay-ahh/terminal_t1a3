@@ -1,9 +1,116 @@
 # 🅽🅴🆃-🆃🅾🅾🅻🆂
 
-Terminal Application Assingment
+My Terminal Application Assignment
+
+Network Tool Box (AIO)
 
 <br />
 
+## Instructions for setup
+
+### System Requirments
+
+<br />
+
+This application requires Unix/Linux Operating Systems.
+
+No Testing on a Mac; however, this should work.
+
+The following is required for net-tools to function.
+
+ - python3              
+ - argparse             (standard library)
+ - subprocess           (standard library)
+ - simple_term_menu     (library)
+ - scapy                (library)
+ 
+
+Instructions to install are below under Dependencies.
+
+<br />
+
+#### Steps to install the application
+
+<br />
+
+First, check if you have python3 installed from a CLI.
+
+```
+python3 --version
+```
+
+Alternatively, you can check the path location.
+
+```
+which python3 
+```
+
+If you need to install Python 3 please vist:
+
+https://www.python.org/downloads/
+
+
+<br />
+
+### Dependencies
+
+As mentioned above, there are some dependencies required for net-tools to function correctly.
+
+<br />
+
+#### argparse   - https://docs.python.org/3/library/argparse.html
+#### subprocess - https://docs.python.org/3/library/subprocess.html
+
+Both argparse and subprocess libraries are a part of the standard library in Python and will not require any installation prior
+
+
+<br />
+
+#### simple-term-menu    - https://pypi.org/project/simple-term-menu/
+
+
+```
+sudo pip install simple-term-menu
+```
+
+It is recommended to install this python library with sudo privileges to avoid any issues when first launching net-tools.
+
+<br />
+
+#### scapy    - https://pypi.org/project/scapy/  or https://scapy.net/
+            
+
+```
+sudo pip install scapy
+```
+
+It is recommended to install this python library with sudo privileges to avoid any issues when running the scanner tool.
+
+
+<br />
+
+---------  ABOVE ALL SPELL AND GRAMMAR CHECKED --------------
+
+### Installing net-tools
+
+First clone the repository to a directory of your choice
+
+```
+git clone https://github.com/emm-jay-ahh/terminal_t1a3.git
+```
+
+Next
+
+Install net-tools
+
+```
+Run Bash Script
+```
+
+
+
+
+<br />
 
 ## Statement of Purpose and Scope
 
@@ -11,7 +118,7 @@ Terminal Application Assingment
 
 ###### Describe at a high level what the application will do
 Net-Tools is a collection of IT Networking Tools that I use almost daily both work and home. 
-Combining these tools into one application for quick execution and ease of use.
+Combining these tools into one application for quick execution and ease of use was a must for me.
 It will also be an ever-growing tool-kit for testing and diagnosing networks including hacking tools.
 
 <br />
@@ -85,7 +192,7 @@ The addition of a ping tool was to avoid having to open a new terminal or close 
 <br />
 
 4. Scan Network
-    - Utilising scapy library - A powerful and interactive packet manipulation program.
+    - Utilising scapy library - A powerful and interactive packet manipulation program. (https://scapy.net/)
     - This is for local network use only (Connecting to a network externally over vpn will also work)
     - User can scan for a specific IP, however tool is for discovering all IPs on network
 
@@ -132,9 +239,8 @@ Option Three - Scan Network
 
 ## Status Updates
 
-- Status Update One complete - see LOGS.md
-- Status Update Two (expected entry 17.07.21) - see LOGS.md
+- Status Update One complete - see development-log.md
+- Status Update Two complete - see development-log.md
 
-## Implement Application
 
-## 
+
