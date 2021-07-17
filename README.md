@@ -16,7 +16,7 @@ This application requires Unix/Linux Operating Systems.
 
 No Testing on a Mac; however, this should work.
 
-The following is required for netwhack to function.
+The following is required for net-whack to function.
 
  - python3              
  - argparse             (standard library)
@@ -50,11 +50,12 @@ If you need to install Python 3 please vist:
 https://www.python.org/downloads/
 
 
+
 <br />
 
 ### Dependencies
 
-As mentioned above, there are some dependencies required for netwhack to function correctly.
+As mentioned above, there are some dependencies required for net-whack to function correctly.
 
 <br />
 
@@ -66,6 +67,14 @@ Both argparse and subprocess libraries are a part of the standard library in Pyt
 
 <br />
 
+I have avoided using a requirements.txt file, my application requires Sudo privileges and the following dependencies need to be installed using Sudo
+
+If you have these dependencies already and the application is still not working, it may be due to the dependencies being installed but not with Sudo privileges
+
+It is best to manually install the following dependencies with the commands supplied below
+
+<br />
+
 #### simple-term-menu    - https://pypi.org/project/simple-term-menu/
 
 
@@ -73,7 +82,7 @@ Both argparse and subprocess libraries are a part of the standard library in Pyt
 sudo pip install simple-term-menu
 ```
 
-It is recommended to install this python library with sudo privileges to avoid any issues when first launching netwhack.
+It is recommended to install this python library with sudo privileges to avoid any issues when first launching net-whack.
 
 <br />
 
@@ -88,16 +97,18 @@ It is recommended to install this python library with sudo privileges to avoid a
 
 <br />
 
-The Network Settings tool is using 'ifconfig' rather than the newer 'ip address'. I'm old skool and have not embraced the change yet.
+The Network Settings tool is using 'ifconfig' rather than the newer 'ip address'. 
 
-Would you please check if this is installed by running the following command
+I'm old skool and have not embraced the change yet, so shoot me.
+
+Would you please check if this is installed by running the following command.
 
 ```
 ifconfig
 ```
 
 
-Otherwise, you can install with the following command
+Otherwise, if not installed, you can install with the following command
 
 
 ```
@@ -112,7 +123,7 @@ sudo apt install net-tools
 
 ---------  ABOVE ALL SPELL AND GRAMMAR CHECKED --------------
 
-### Installing netwhack
+### Installing net-whack
 
 First clone the repository to a directory of your choice
 
@@ -122,7 +133,7 @@ git clone https://github.com/emm-jay-ahh/terminal_t1a3.git
 
 Next
 
-Install netwhack
+Install net-whack
 
 ```
 Run Bash Script
@@ -136,7 +147,7 @@ Run Bash Script
 ## Statement of Purpose and Scope
 
 ###### Describe at a high level what the application will do
-netwhack is a collection of IT Networking Tools that I use almost daily both work and home. 
+net-whack is a collection of IT Networking Tools that I use almost daily both work and home. 
 Combining these tools into one application for quick execution and ease of use was a must for me.
 It will also be an ever-growing tool-kit for testing and diagnosing networks including hacking tools.
 
@@ -170,7 +181,7 @@ Some tools will also have submenus allowing for different operations or tasks th
 
 ###### At least THREE features, describe each feature
 
-1. netwhack Menu System
+1. net-whack Menu System
     - Utilising simple_term_menu (Library)  - https://pypi.org/project/simple-term-menu/
     - A simple interactive and intuitive design
     - Easy navigation up/down + enter or assigned shortcut keys (also VIM shortcuts work)
@@ -227,7 +238,7 @@ This information is then updated within the ARP Table on your system.
 
 ## User Interaction and Experience
 
-User will launch netwhack, and the following menu will be displayed
+User will launch net-whack, and the following menu will be displayed
 
 
 ### Main Menu
@@ -323,7 +334,7 @@ High network latency can cause a further issue in returning host IPs that are al
 
 ### EXIT/QUIT
 
-To exit netwhack you can select and enter Quit/Exit or use the shortcut key [q]
+To exit net-whack you can select and enter Quit/Exit or use the shortcut key [q]
 
 This will also work in the submenu and will exit the application
 
@@ -343,7 +354,7 @@ Sold, the inbuilt navigation (up/down arrows) is baked in.
 The simplicity of adding colour and descriptions to menu options was another great feature.
 Overall this allowed me to focus more on constructing the network tools in the app.
 
-An MVP was up and ready within a couple of hours. Approx 5 hours total spent on the Menu System.
+An MVP was up and ready within an hour. Approx 5 hours total spent on the Menu System.
 
 Second I needed to get more familiar with subprocess (python library) as I wanted to invoke some *nix commands to perform some actions directly from the application.  I spent approx 2-3 hours researching and playing with subprocess.
 
