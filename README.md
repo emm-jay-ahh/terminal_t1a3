@@ -169,8 +169,10 @@ OR
 python3 net-whack.py --help
 ```
 
+
 <br />
 <br />
+
 
 ## Statement of Purpose and Scope
 
@@ -202,8 +204,10 @@ The tool requires execution from a terminal CLI and will display a simple and ea
 The user can navigate with the up/down arrows and Enter key or by using a quick key that is assigned.
 Some tools will also have submenus allowing for different operations or tasks that they can perform.
 
+
 <br />
 <br />
+
 
 ## Features
 
@@ -214,6 +218,8 @@ Some tools will also have submenus allowing for different operations or tasks th
     - A simple interactive and intuitive design
     - Easy navigation up/down + enter or assigned shortcut keys (also VIM shortcuts work)
     - And Future proof to handle a growing toolset
+
+<br />
 
 The idea here is to keep the interface clean and uncluttered; we are going for function over fashion.
 I decided to go with "simple_term_menu" library for a terminal menu system as it seems to tick all the boxes.
@@ -230,6 +236,8 @@ The documentation is solid, and getting a quick demo up and running was relative
         - Show Interface - Check Settings on a specific interface
             - It requires the user to enter an interface name; it then will return the results for that interface only.
 
+<br />
+
 The idea is to be able to check network settings without opening another terminal or leaving this application to do so.
 Other tools current and future this application will house will require the user to know this type of information before tolls can be deployed correctly.
 
@@ -241,6 +249,8 @@ Other tools current and future this application will house will require the user
     - Can also ping externally (e.g. www.google.com).
     - User is required to enter an IP or FQDN and then the number of ping packets to send.
 
+<br />
+
 The idea here is to check that we have network access, either internal or external or both.
 Ping is a great tool for helping to troubleshoot network-related issues.
 The addition of a ping tool was to avoid having to open a new terminal or close the application to check for network connectivity.
@@ -251,6 +261,8 @@ The addition of a ping tool was to avoid having to open a new terminal or close 
     - Utilising scapy library - A powerful and interactive packet manipulation program. 
     - This is for local network use only (Connecting to a network externally over VPN will also work)
     - User can scan for a specific IP. However, the tool is for discovering all IPs on a network
+
+<br />
 
 The idea is to scan your whole network for connected devices and have them return the IP address of active hosts.
 Scan network is utilising the ARP protocol, which is a layer 2 protocol of the OSI Model, also known as the Data Link layer. ARP is short for Address Resolution Protocol
@@ -264,9 +276,8 @@ This information is then updated within the ARP Table on your system.
 <br />
 <br />
 
-## User Interaction and Experience
 
-User will launch net-whack, and the following menu will be displayed
+## User Interaction and Experience
 
 
 ### Main Menu
@@ -287,6 +298,7 @@ The user can utilise the keyboard with up/down + enter, or the user can use the 
 
 A submenu to the Main Menu and provides two options to the user.
 
+<br />
 
 #### Show All 
 - Shows all Network Settings      shortcut key [1]
@@ -298,8 +310,9 @@ This tool is utilising 'ifconfig' if you have issues please see above under Depe
 
 Error:
 
-No errors
+NONE
 
+<br />
 
 #### Show Interface 
 - Shows Specfic Network Inteface      shortcut key [2]
@@ -315,6 +328,8 @@ Error:
 Providing the wrong interface will show the following error.
 
 "error fetching interface information: Device not found"
+
+<br />
 
 #### Back to Main Menu
 - Return you back to the main menu      shortcut[b]
@@ -335,8 +350,6 @@ An excellent tool for troubleshooting network connectivity both internally and e
 Error:
 
 There are no errors displayed to the user. The only indication that you may have entered an incorrect address is 100% packet loss 
-
-
 
 <br />
 
@@ -365,8 +378,8 @@ To exit net-whack you can select and enter Quit/Exit or use the shortcut key [q]
 
 This will also work in the submenu and will exit the application
 
-<br />
 
+<br />
 <br />
 
 
@@ -374,9 +387,10 @@ This will also work in the submenu and will exit the application
 
 ![Control Flow](https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-control_flow.jpg)
 
-<br />
 
 <br />
+<br />
+
 
 ## Implementation Plan
 
@@ -398,6 +412,7 @@ Last I needed to research scapy (python library) for Scan Network to function.  
 
 An MVP for Scan Network took approx 3-4 hours, and I have spent probably close to 6-7 hours in total. I had some issues implementing it to the Terminal Menu System, but I got there in the end; with a bit of help from my teacher, I got it to work.
 
+<br />
 
 - MAIN MENU SYSTEM      (APP OPENS HERE)
 
@@ -411,7 +426,8 @@ An MVP for Scan Network took approx 3-4 hours, and I have spent probably close t
         
         - Back to Main Menu 
             - app will return user to main menu
-    
+
+<br />    
 
      - Ping Host    (TOOL)
         
@@ -423,6 +439,7 @@ An MVP for Scan Network took approx 3-4 hours, and I have spent probably close t
 
         - User is required to hit 'Enter' to return to main menu
 
+<br />
 
     - Scan Network  (TOOL)
         - User is required to enter a Network and subnet
@@ -435,6 +452,7 @@ An MVP for Scan Network took approx 3-4 hours, and I have spent probably close t
             
             - User is required to hit 'Enter' to return to main menu
 
+<br />
 
     -Exit/Quit  
         - This is simply reuturns user back to the CLI
@@ -443,14 +461,16 @@ An MVP for Scan Network took approx 3-4 hours, and I have spent probably close t
 
 <br />
 
+### TESTING
+
 Testing I undertook to ensure the application operates as intended
 
 ![Testing](https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-testing.jpg)
 
 
 <br />
-
 <br />
+
 
 ## Status Updates
 
