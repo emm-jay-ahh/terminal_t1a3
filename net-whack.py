@@ -26,7 +26,7 @@ def menu():
     main_menu = TerminalMenu(
         main_options,
         clear_screen=True,
-        title="\n\n     🅽 🅴 🆃 - 🆃 🅾 🅾 🅻 🆂\n\n",
+        title="\n\n     🅽 🅴 🆃 - 🆆 🅷 🅰 🅲 🅺\n\n",
         status_bar="\n     Tools\n",
         menu_cursor_style=("fg_green", "bold",),
         menu_highlight_style=("bg_black", "fg_green"),
