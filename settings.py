@@ -17,9 +17,9 @@ def show_all():
 
 def show_interface():       
     # command we want to invoke
-    interface = input(  "\nEnter an interface name"
-                        "\ne.g eth0, wlan0, eno2"
-                        "\n\n>>> ")
+    interface = input(  "\n Enter an interface name"
+                        "\n e.g eth0, wlan0, eno2"
+                        "\n\n >>> ")
     
     command = ("ifconfig " + interface) 
     # Send any number of pings to a host address (FQDN or IP Address)
