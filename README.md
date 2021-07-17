@@ -329,6 +329,8 @@ This will also work in the submenu and will exit the application
 
 ## Control Flow Diagram
 
+![Control Flow](https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-control_flow.jpg)
+
 ## Implementation Plan
 
 ------------- NEED TO ADD IN TRELLO STUFF --------------
