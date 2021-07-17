@@ -25,7 +25,6 @@ The following is required for net-whack to function.
  - scapy                (library)
  
 
-Instructions to install are below under Dependencies.
 
 <br />
 
@@ -62,6 +61,8 @@ As mentioned above, there are some dependencies required for net-whack to functi
 #### argparse   - https://docs.python.org/3/library/argparse.html
 #### subprocess - https://docs.python.org/3/library/subprocess.html
 
+<br />
+
 Both argparse and subprocess libraries are a part of the standard library in Python and will not require any installation prior
 
 
@@ -69,9 +70,10 @@ Both argparse and subprocess libraries are a part of the standard library in Pyt
 
 I have avoided using a requirements.txt file, my application requires Sudo privileges and the following dependencies need to be installed using Sudo
 
-If you have these dependencies already and the application is still not working, it may be due to the dependencies being installed but not with Sudo privileges
+I would rather the user know what is taking place when Sudo privileges are invoked.  I think it is best the user manually installs for peace of mind and not from an automated script they may not understand.
 
-It is best to manually install the following dependencies with the commands supplied below
+If you have these dependencies already and the application is still not working, it may be due to the dependencies being installed but not with Sudo privileges.
+
 
 <br />
 
@@ -101,12 +103,14 @@ The Network Settings tool is using 'ifconfig' rather than the newer 'ip address'
 
 I'm old skool and have not embraced the change yet, so shoot me.
 
+<br />
+
 Would you please check if this is installed by running the following command.
 
 ```
 ifconfig
 ```
-
+<br />
 
 Otherwise, if not installed, you can install with the following command
 
@@ -117,29 +121,53 @@ sudo apt install net-tools
 
 <br />
 
+<br />
 
 
-
-
----------  ABOVE ALL SPELL AND GRAMMAR CHECKED --------------
 
 ### Installing net-whack
 
-First clone the repository to a directory of your choice
+First, clone the repository to a directory of your choice
 
 ```
 git clone https://github.com/emm-jay-ahh/terminal_t1a3.git
 ```
 
-Next
+<br />
 
-Install net-whack
+Next, we need to convert install.sh to be executable.
 
 ```
-Run Bash Script
+chmod 755 install.sh
 ```
+<br />
+
+Finally, we can now execute install.sh
 
 
+```
+./install.sh
+```
+net-whack.py should now launch
+
+<br />
+
+Alternatively, after you have cloned the repo, we can run the net-whack.py as follows
+
+```
+sudo python3 net-whack.py
+```
+<br />
+
+If you wish to view help information (sudo is not required)
+
+```
+python3 net-whack.py -h
+```
+OR
+```
+python3 net-whack.py --help
+```
 
 <br />
 <br />
@@ -329,7 +357,6 @@ No actual errors will display; however, if you input the incorrect network, the 
 Please also note that I have a 1-second timeout on un-returned packets. This is to avoid the tool from 'hanging' as it waits for a return packet that will never actually be returned.
 High network latency can cause a further issue in returning host IPs that are alive and have gone beyond the 1-second threshold.
 
-
 <br />
 
 ### EXIT/QUIT
@@ -340,9 +367,14 @@ This will also work in the submenu and will exit the application
 
 <br />
 
+<br />
+
+
 ## Control Flow Diagram
 
 ![Control Flow](https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-control_flow.jpg)
+
+<br />
 
 <br />
 
@@ -418,6 +450,8 @@ Testing I undertook to ensure the application operates as intended
 
 <br />
 
+<br />
+
 ## Status Updates
 
 - Status Update One complete - see development-log.md
@@ -426,5 +460,8 @@ Testing I undertook to ensure the application operates as intended
 https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/development-log.md
 
 
+<br />
 
--
+- Trello worklog can be found here:
+
+https://github.com/emm-jay-ahh/terminal_t1a3/tree/main/trello
