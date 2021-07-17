@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python3 net-whack.py
+sudo python3 net-whack.py $1

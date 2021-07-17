@@ -19,28 +19,23 @@ def scan_network():
 
 
         # Return results to user
-        try:
-            def returned_results(results):
-                print("\nIP ADDRESS\t\t\tMAC ADDRESS\n-------------------------------------------")
-                for alive_client in results:
-                    print(alive_client["ip"] + "\t\t  " + alive_client["mac"])
+        def returned_results(results):
+            print("\nIP ADDRESS\t\t\tMAC ADDRESS\n-------------------------------------------")
+            for alive_client in results:
+                print(alive_client["ip"] + "\t\t  " + alive_client["mac"])
 
-                return_msg
-            
-            # added the input entry here 
-            print("\n Enter Network with subnet\n eg. 192.168.1.1/24")
-            scan_result = scan(input(" >>> "))
-            returned_results(scan_result)
+            input("\n\n Press Enter to return to MAIN MENU\n\n")
         
-        # Error handliing when input is not compatible
-        except NameError:
-            input("\n\nINPUT NOT COMPATIBLE SEE e.g ABOVE\n\nRETURNING TO MAIN MENU (HIT ENTER)") 
-            return  
-
+        # added the input entry here 
+        print("\n Enter Network with subnet\n eg. 192.168.1.1/24\n If no results check network input is correct")
+        scan_result = scan(input(" >>> "))
+        returned_results(scan_result)
+        
+       
     # Error handling Keyboard interupts
     except KeyboardInterrupt:
         print("\n\n A KEYBOARD INTERUPT DETECTED\n\n")
-        return_msg = input("\n\n Press Enter to return to MAIN MENU\n\n")
+        input("\n\n Press Enter to return to MAIN MENU\n\n")
         return
         
     

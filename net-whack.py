@@ -1,4 +1,5 @@
 import argparse
+from sys import argv
 from simple_term_menu import TerminalMenu
 from ping import ping_host
 from settings import show_all, show_interface
@@ -7,8 +8,8 @@ from scanner import scan_network
 
 def parse_arguments():
     parser = argparse.ArgumentParser(
-        usage="sudo net-whack\nOR\nsudo python3 net-whack.py",
-        description="sudo privileges are required for the tools inside to function correctly"
+        usage="\n\nTRY\tsudo python3 net-whack.py\nOR\t./run-me.sh",
+        description="\nSudo privileges are required for the tools inside to function correctly\n",
     
     )
     parser.parse_args()
@@ -88,7 +89,7 @@ def menu():
                     scan_network()                              # change to Scan Network when app is built
     
         except TypeError:
-            print("\n\nERROR: TYPE ERROR - POSSIBLE KEYBOARD INTERUPT - EXIT NET-WHACK\n\n")
+            print("\n\nPOSSIBLE KEYBOARD INTERUPT OR TYPE ERROR - EXITING NET-WHACK\n\n")
         
     
     
