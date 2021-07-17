@@ -277,6 +277,8 @@ Providing the wrong interface will show the following error.
 
 "error fetching interface information: Device not found"
 
+#### Back to Main Menu
+- Return you back to the main menu      shortcut[b]
 
 <br />
 
@@ -314,13 +316,16 @@ Error:
 No actual errors will display; however, if you input the incorrect network, the results returned will be empty. Double-check the network and subnet and try again.
 
 Please also note that I have a 1-second timeout on un-returned packets. This is to avoid the tool from 'hanging' as it waits for a return packet that will never actually be returned.
-High network latency can cause a further issue in returning host IPs that are alive and have gone beyond the 1 second threshold.
+High network latency can cause a further issue in returning host IPs that are alive and have gone beyond the 1-second threshold.
 
 
 <br />
 
+### EXIT/QUIT
+
 To exit netwhack you can select and enter Quit/Exit or use the shortcut key [q]
 
+This will also work in the submenu and will exit the application
 
 ## Control Flow Diagram
 
