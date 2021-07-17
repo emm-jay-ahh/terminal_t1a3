@@ -1,4 +1,4 @@
-# 🅽🅴🆃-🆃🅾🅾🅻🆂
+# 🅽🅴🆃-🆆🅷🅰🅲🅺
 
 My Terminal Application Assignment
 
@@ -16,7 +16,7 @@ This application requires Unix/Linux Operating Systems.
 
 No Testing on a Mac; however, this should work.
 
-The following is required for net-tools to function.
+The following is required for netwhack to function.
 
  - python3              
  - argparse             (standard library)
@@ -54,7 +54,7 @@ https://www.python.org/downloads/
 
 ### Dependencies
 
-As mentioned above, there are some dependencies required for net-tools to function correctly.
+As mentioned above, there are some dependencies required for netwhack to function correctly.
 
 <br />
 
@@ -73,7 +73,7 @@ Both argparse and subprocess libraries are a part of the standard library in Pyt
 sudo pip install simple-term-menu
 ```
 
-It is recommended to install this python library with sudo privileges to avoid any issues when first launching net-tools.
+It is recommended to install this python library with sudo privileges to avoid any issues when first launching netwhack.
 
 <br />
 
@@ -86,12 +86,33 @@ sudo pip install scapy
 
 It is recommended to install this python library with sudo privileges to avoid any issues when running the scanner tool.
 
+<br />
+
+The Network Settings tool is using 'ifconfig' rather than the newer 'ip address'. I'm old skool and have not embraced the change yet.
+
+Would you please check if this is installed by running the following command
+
+```
+ifconfig
+```
+
+
+Otherwise, you can install with the following command
+
+
+```
+sudo apt install net-tools
+```
 
 <br />
 
+
+
+
+
 ---------  ABOVE ALL SPELL AND GRAMMAR CHECKED --------------
 
-### Installing net-tools
+### Installing netwhack
 
 First clone the repository to a directory of your choice
 
@@ -101,7 +122,7 @@ git clone https://github.com/emm-jay-ahh/terminal_t1a3.git
 
 Next
 
-Install net-tools
+Install netwhack
 
 ```
 Run Bash Script
@@ -115,7 +136,7 @@ Run Bash Script
 ## Statement of Purpose and Scope
 
 ###### Describe at a high level what the application will do
-Net-Tools is a collection of IT Networking Tools that I use almost daily both work and home. 
+netwhack is a collection of IT Networking Tools that I use almost daily both work and home. 
 Combining these tools into one application for quick execution and ease of use was a must for me.
 It will also be an ever-growing tool-kit for testing and diagnosing networks including hacking tools.
 
@@ -149,7 +170,7 @@ Some tools will also have submenus allowing for different operations or tasks th
 
 ###### At least THREE features, describe each feature
 
-1. Net-Tools Menu System
+1. netwhack Menu System
     - Utilising simple_term_menu (Library)  - https://pypi.org/project/simple-term-menu/
     - A simple interactive and intuitive design
     - Easy navigation up/down + enter or assigned shortcut keys (also VIM shortcuts work)
@@ -206,7 +227,7 @@ This information is then updated within the ARP Table on your system.
 
 ## User Interaction and Experience
 
-User will launch net-tools, and the following menu will be displayed
+User will launch netwhack, and the following menu will be displayed
 
 
 ### Main Menu
@@ -225,7 +246,7 @@ The user can utilise the keyboard with up/down + enter, or the user can use the 
 
 ![Network Settings Menu](https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-net_settings_menu.jpg)
 
-This is a submenu to the Main Menu and provides two options to the user.
+A submenu to the Main Menu and provides two options to the user.
 
 
 #### Show All 
@@ -233,7 +254,12 @@ This is a submenu to the Main Menu and provides two options to the user.
 
 ![Show All](https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-net_settings_menu-show_all.jpg)
 
-Just click Show All, and it will display all interfaces on your PC.
+Hit Show All, and it will display all interfaces on your PC.
+This tool is utilising 'ifconfig' if you have issues please see above under Dependencies on how to install
+
+Error:
+
+No errors
 
 
 #### Show Interface 
@@ -245,6 +271,13 @@ You will need to enter the interface name (network adapter), then press Enter to
 
 To go back to the Main Menu you can select and enter Back to Main Menu or use the shortcut key [b]
 
+Error:
+
+Providing the wrong interface will show the following error.
+
+"error fetching interface information: Device not found"
+
+
 <br />
 
 ### TOOL 02 - Ping Host     
@@ -254,7 +287,15 @@ To go back to the Main Menu you can select and enter Back to Main Menu or use th
 
 Here we can either enter a web address (e.g. www.google.com) or an IP address (e.g. 192.168.1.200).
 It will then ask for how many ping packets to send (3 - 4 is usually enough)
-This is a great tool for troubleshooting network connectivity internally and externally.
+An excellent tool for troubleshooting network connectivity both internally and externally.
+
+100% packet loss indicates the host you are sending the pings to is either offline, ICMP has been disabled on the host, a firewall is blocking ICMP requests, or the address entered is incorrect
+
+Error:
+
+There are no errors displayed to the user. The only indication that you may have entered an incorrect address is 100% packet loss 
+
+
 
 <br />
 
@@ -263,15 +304,30 @@ This is a great tool for troubleshooting network connectivity internally and ext
 
 ![Scan Network](https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-scan_network.jpg)
 
+Scan Network requires that we enter a Network and Subnet in the following format 10.0.0.1/24
+
+This tool is great for scouting out all live hosts on a network.
+
+It returns the IP Address in use and the associated MAC tied to it.
+
+Error:
+No actual errors will display; however, if you input the incorrect network, the results returned will be empty. Double-check the network and subnet and try again.
+
+Please also note that I have a 1-second timeout on un-returned packets. This is to avoid the tool from 'hanging' as it waits for a return packet that will never actually be returned.
+High network latency can cause a further issue in returning host IPs that are alive and have gone beyond the 1 second threshold.
+
 
 <br />
 
-To exit net-tools you can select and enter Quit/Exit or use the shortcut key [q]
+To exit netwhack you can select and enter Quit/Exit or use the shortcut key [q]
 
 
 ## Control Flow Diagram
 
 ## Implementation Plan
+
+------------- NEED TO ADD IN TRELLO STUFF --------------
+------------- NEED TO ADD IN TEST RESULTS --------------
 
 ## Status Updates
 
@@ -282,3 +338,4 @@ https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/development-log.md
 
 
 
+-
