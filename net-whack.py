@@ -9,9 +9,7 @@ from scanner import scan_network
 def parse_arguments():
     parser = argparse.ArgumentParser(
         usage="\n\nTRY\tsudo python3 net-whack.py\nOR\t./run-me.sh",
-        description="\nSudo privileges are required for the tools inside to function correctly\n",
-    
-    )
+        description="\nSudo privileges are required for the tools inside to function correctly\n",)
     parser.parse_args()
 
 
