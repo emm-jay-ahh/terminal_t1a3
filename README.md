@@ -135,18 +135,18 @@ git clone https://github.com/emm-jay-ahh/terminal_t1a3.git
 
 <br />
 
-Next, we need to convert install.sh to be executable.
+Next, we need to convert run-me.sh to be executable.
 
 ```
-chmod 755 install.sh
+chmod 755 run-me.sh
 ```
 <br />
 
-Finally, we can now execute install.sh
+Finally, we can now execute run-me.sh
 
 
 ```
-./install.sh
+./run-me.sh
 ```
 net-whack.py should now launch
 
@@ -168,7 +168,14 @@ OR
 ```
 python3 net-whack.py --help
 ```
-
+OR
+```
+./run-me.sh -h
+```
+OR
+```
+./run-me.sh --help
+```
 
 <br />
 <br />
@@ -455,7 +462,7 @@ An MVP for Scan Network took approx 3-4 hours, and I have spent probably close t
 
 
     - Exit/Quit  
-        - This is simply reuturns user back to the CLI
+        - This will reuturn the user back to the CLI
             - this simple task is built in to simple_term_menu
 
 
