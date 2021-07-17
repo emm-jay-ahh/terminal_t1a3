@@ -454,7 +454,7 @@ An MVP for Scan Network took approx 3-4 hours, and I have spent probably close t
 
 
 
-    -Exit/Quit  
+    - Exit/Quit  
         - This is simply reuturns user back to the CLI
             - this simple task is built in to simple_term_menu
 
