@@ -327,14 +327,85 @@ To exit netwhack you can select and enter Quit/Exit or use the shortcut key [q]
 
 This will also work in the submenu and will exit the application
 
+<br />
+
 ## Control Flow Diagram
 
 ![Control Flow](https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-control_flow.jpg)
 
+<br />
+
 ## Implementation Plan
 
-------------- NEED TO ADD IN TRELLO STUFF --------------
-------------- NEED TO ADD IN TEST RESULTS --------------
+The first thing I needed to do was find a terminal menu system, which was easy to use and not too difficult to implement.
+I eventually stumbled upon simple_term_menu (python library) from a (7 min) Youtube video tutorial (how-to). 
+Sold, the inbuilt navigation (up/down arrows) is baked in.
+The simplicity of adding colour and descriptions to menu options was another great feature.
+Overall this allowed me to focus more on constructing the network tools in the app.
+
+An MVP was up and ready within a couple of hours. Approx 5 hours total spent on the Menu System.
+
+Second I needed to get more familiar with subprocess (python library) as I wanted to invoke some *nix commands to perform some actions directly from the application.  I spent approx 2-3 hours researching and playing with subprocess.
+
+An MVP for Network Settings was ready in 2 hours, and I roughly took a total of 4 hours to finalise it.
+
+An MVP for Ping Host was ready in approx 1.5 hours.  I roughly spent about 3-4 hours getting it to where I wanted it.
+
+Last I needed to research scapy (python library) for Scan Network to function.  Had spent quite a bit of time here researching and following tutorials to wrap my head around it better approx 4 hours of researching and fiddling with scapy.
+
+An MVP for Scan Network took approx 3-4 hours, and I have spent probably close to 6-7 hours in total. I had some issues implementing it to the Terminal Menu System, but I got there in the end; with a bit of help from my teacher, I got it to work.
+
+
+- MAIN MENU SYSTEM      (APP OPENS HERE)
+
+    - Network Settings  (SUBMENU)
+        
+        - Show All      (show all network interface on system)        
+            - app will invoke 'ifconfig'
+
+        - Show Interface    (show only a specific network interface on system)
+            - user enters {interface} name - app will invoke 'ifconfig {interface}'
+        
+        - Back to Main Menu 
+            - app will return user to main menu
+    
+
+     - Ping Host    (TOOL)
+        
+        - User is required to enter a IP or WEB Address {host} and then the amount {count} of pings to send    
+            - app will invoke 'ping -c {count} {host}'
+        
+        - Alot of information is normally returned, stripping away uneccarry data was required
+            - app to display only relevant data back to user
+
+        - User is required to hit 'Enter' to return to main menu
+
+
+    - Scan Network  (TOOL)
+        - User is required to enter a Network and subnet
+            - app then sends our a Broadcast ARP packet (ICMP)
+            - Any alive hosts on network will return a reply packet 
+                - Stating their IP address
+                - Stating their MAC Address
+            - app processes this information
+                - Return back to user in a table form Host information
+            
+            - User is required to hit 'Enter' to return to main menu
+
+
+    -Exit/Quit  
+        - This is simply reuturns user back to the CLI
+            - this simple task is built in to simple_term_menu
+
+
+<br />
+
+Testing I undertook to ensure the application operates as intended
+
+![Testing](https://github.com/emm-jay-ahh/terminal_t1a3/blob/main/app_images/matthew-rooney-T1A3-testing.jpg)
+
+
+<br />
 
 ## Status Updates
 
