@@ -427,7 +427,7 @@ An MVP for Scan Network took approx 3-4 hours, and I have spent probably close t
         - Back to Main Menu 
             - app will return user to main menu
 
-<br />    
+   
 
      - Ping Host    (TOOL)
         
@@ -439,7 +439,7 @@ An MVP for Scan Network took approx 3-4 hours, and I have spent probably close t
 
         - User is required to hit 'Enter' to return to main menu
 
-<br />
+
 
     - Scan Network  (TOOL)
         - User is required to enter a Network and subnet
@@ -452,7 +452,7 @@ An MVP for Scan Network took approx 3-4 hours, and I have spent probably close t
             
             - User is required to hit 'Enter' to return to main menu
 
-<br />
+
 
     -Exit/Quit  
         - This is simply reuturns user back to the CLI
