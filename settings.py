@@ -12,7 +12,7 @@ def show_all():
 
     print(full_command)
 
-    input("\nPress ENTER to return to Main Menu\n\n")
+    input("\n\n Press Enter to return to MAIN MENU\n\n")
 
 
 def show_interface():       
@@ -28,5 +28,5 @@ def show_interface():
 
     print(full_command)
 
-    input("\nPress ENTER to return to Main Menu\n\n")
+    input("\n\n Press Enter to return to MAIN MENU\n\n")
 

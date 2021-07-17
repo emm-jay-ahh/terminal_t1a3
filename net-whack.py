@@ -7,7 +7,7 @@ from scanner import scan_network
 
 def parse_arguments():
     parser = argparse.ArgumentParser(
-        usage="sudo net-tools",
+        usage="sudo net-whack\nOR\nsudo python3 net-whack.py",
         description="sudo privileges are required for the tools inside to function correctly"
     
     )
@@ -78,7 +78,7 @@ def menu():
                     except AttributeError:
                         continue
                     except KeyboardInterrupt:
-                        print("KEYBOARD INTERUPT")
+                        print("\n\nKEYBOARD INTERUPT - EXIT NET-WHACK\n\n")
                         
 
                 elif(options_choice == main_options[1]):    
@@ -88,9 +88,12 @@ def menu():
                     scan_network()                              # change to Scan Network when app is built
     
         except TypeError:
-            print("\nERROR:  POSSIBLE KEYBOARD INTERUPT\n")
+            print("\n\nERROR: TYPE ERROR - POSSIBLE KEYBOARD INTERUPT - EXIT NET-WHACK\n\n")
+        
+    
     
     menu_operation()
+
 
 parse_arguments()
 menu()

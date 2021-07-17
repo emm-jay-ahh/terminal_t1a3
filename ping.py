@@ -22,9 +22,9 @@ def ping_host():
                 results.append(line)
         
             # print the results
-            print("\nPING RESULTS: \n")
+            print("\n PING RESULTS: \n")
             print("\n".join(results[len(results) - 3:len(results) - 1]))
-            input("\n\nPress Enter to return to MAIN MENU\n\n")
+            input("\n\n Press Enter to return to MAIN MENU\n\n")
             
             return results
 
