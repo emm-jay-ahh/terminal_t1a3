@@ -231,6 +231,7 @@ Some tools will also have submenus allowing for different operations or tasks th
 The idea here is to keep the interface clean and uncluttered; we are going for function over fashion.
 I decided to go with "simple_term_menu" library for a terminal menu system as it seems to tick all the boxes.
 The navigation is baked in but allowing hotkeys assignment will speed things up.
+
 The documentation is solid, and getting a quick demo up and running was relatively quick. I had to get a feel for how it operates before committing to it.
    
 <br />
@@ -246,7 +247,7 @@ The documentation is solid, and getting a quick demo up and running was relative
 <br />
 
 The idea is to be able to check network settings without opening another terminal or leaving this application to do so.
-Other tools current and future this application will house will require the user to know this type of information before tolls can be deployed correctly.
+Other tools current and future this application will house will require the user to know this type of information before tools can be deployed correctly.
 
 <br />
 
@@ -272,10 +273,12 @@ The addition of a ping tool was to avoid having to open a new terminal or close 
 <br />
 
 The idea is to scan your whole network for connected devices and have them return the IP address of active hosts.
-Scan network is utilising the ARP protocol, which is a layer 2 protocol of the OSI Model, also known as the Data Link layer. ARP is short for Address Resolution Protocol
+Scan network is utilising the ARP protocol, which is a layer 2 protocol of the OSI Model, also known as the Data Link layer. ARP is short for Address Resolution Protocol.
+
 Scan Network is forwarding a broadcast packet to your switch. 
 The switch will then flood out of all connected ports the ARP request packet it just received.
 Any operating devices connected will see this ARP packet request.
+
 The devices will then reply with a unicast packet stating, this is my MAC, and this is my IP Address associated with that MAC.
 This information is then updated within the ARP Table on your system.
 
